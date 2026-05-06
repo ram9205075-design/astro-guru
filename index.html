@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta name="monetag" content="add2bb9d6e49401e9d55d74c7043c8d7">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astro Guru - Celestial Wisdom</title>
+    
+    <!-- Monetag Verification Tag -->
+    <meta name="monetag" content="add2bb9d6e49401e9d55d74c7043c8d7">
+
     <!-- Tailwind CSS for modern UI -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -275,13 +278,11 @@
             document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
             document.getElementById(`page-${pageId}`).classList.remove('hidden');
             
-            // Update nav styles
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active-tab');
                 if (btn.getAttribute('data-page') === pageId) btn.classList.add('active-tab');
             });
 
-            // Close mobile menu
             document.getElementById('mobile-menu').classList.add('hidden');
             window.scrollTo(0, 0);
         }
@@ -402,7 +403,6 @@
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Initialize Icons & Content
         window.onload = () => {
             lucide.createIcons();
             initHoroscopeGrid();
